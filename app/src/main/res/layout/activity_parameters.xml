@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".ParametersActivity" android:orientation="vertical"
+    android:background="@color/my_background_color">
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="30dp" android:textAlignment="center"
+        android:layout_margin="10dp" android:textSize="20dp"
+        android:text="Enter you username:" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_height="wrap_content" android:layout_width="wrap_content"
+        android:layout_margin="10dp" android:padding="10dp" android:layout_gravity="center"
+        android:inputType="text" android:hint="username" />
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="30dp" android:textAlignment="center"
+        android:layout_margin="10dp" android:textSize="20dp"
+        android:text="Choose your skill level:" />
+
+    <LinearLayout
+        android:layout_margin="10dp" android:layout_gravity="center"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="1" android:onClick="level1" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="2" android:onClick="level2" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="3" android:onClick="level3" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="4" android:onClick="level4" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="5" android:onClick="level5" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="6" android:onClick="level6" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="7" android:onClick="level7" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="8" android:onClick="level8" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="9" android:onClick="level9" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="20dp" android:textAlignment="center"
+        android:layout_margin="10dp" android:textSize="10dp" android:id="@+id/current_level" />
+
+</LinearLayout>

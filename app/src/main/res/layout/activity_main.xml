@@ -3,81 +3,137 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context=".MainActivity" android:orientation="vertical">
+    tools:context=".MainActivity" android:orientation="vertical"
+    android:background="@color/my_background_color" >
 
     <TextView
         android:layout_width="match_parent" android:layout_height="20dp"
-        android:text="Hello in Magic Triangle!" />
+        android:layout_margin="10dp" android:textAlignment="center"
+        android:text="Number 1 to 9 have to be used once and only once " />
     
     <GridLayout
         android:layout_margin="20dp" android:padding="20dp" android:layout_gravity="center"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:columnCount="3">
+        android:columnCount="4">
+
+        <!--first line-->
+        <EditText
+            android:id="@+id/e11"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
+
+        <EditText
+            android:id="@+id/e12"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
+
+        <EditText
+            android:id="@+id/e13"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
 
         <TextView
-            android:id="@+id/t1"
+            android:id="@+id/sum1"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV1" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="14" />
+
+        <!--second line-->
+        <EditText
+            android:id="@+id/e21"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
+
+        <EditText
+            android:id="@+id/e22"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
+
+        <EditText
+            android:id="@+id/e23"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
 
         <TextView
-            android:id="@+id/t2"
+            android:id="@+id/sum2"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV2" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="18" />
+
+        <!--third line-->
+        <EditText
+            android:id="@+id/e31"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
+
+        <EditText
+            android:id="@+id/e32"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
+
+        <EditText
+            android:id="@+id/e33"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp"
+            android:inputType="number" android:maxLength="1" android:hint="0" />
 
         <TextView
-            android:id="@+id/t3"
+            android:id="@+id/sum3"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV4" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
+
+        <!--fourth line-->
+        <TextView
+            android:id="@+id/sum4"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
 
         <TextView
-            android:id="@+id/t4"
+            android:id="@+id/sum5"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV4" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
 
         <TextView
-            android:id="@+id/t5"
+            android:id="@+id/sum6"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV5" />
-
-        <TextView
-            android:id="@+id/t6"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV6" />
-
-        <TextView
-            android:id="@+id/t7"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV7" />
-
-        <TextView
-            android:id="@+id/t8"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV8" />
-
-        <TextView
-            android:id="@+id/t9"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV9" />
-
-        <TextView
-            android:id="@+id/t10"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV10" />
-
-        <TextView
-            android:id="@+id/t11"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV11" />
-
-        <TextView
-            android:id="@+id/t12"
-            android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="20dp" android:padding="20dp" android:text="TV12" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
 
     </GridLayout>
 
+    <LinearLayout
+        android:layout_margin="10dp" android:layout_gravity="center"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Submit" android:onClick="submit" />
 
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="New game" android:onClick="newGame" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp" android:layout_gravity="center"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Resume" android:onClick="resume" />
+
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Quit" android:onClick="quit" />
+
+    </LinearLayout>
 
 </LinearLayout>
