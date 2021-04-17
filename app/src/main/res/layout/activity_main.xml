@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
     tools:context=".MainActivity" android:orientation="vertical"
     android:background="@color/my_background_color" >
 
     <TextView
+        android:id="@+id/text1"
         android:layout_width="match_parent" android:layout_height="20dp"
         android:layout_margin="10dp" android:textAlignment="center"
         android:text="Number 1 to 9 have to be used once and only once " />
@@ -38,7 +38,7 @@
         <TextView
             android:id="@+id/sum1"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="10dp" android:padding="10dp" android:text="14" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="..." />
 
         <!--second line-->
         <EditText
@@ -62,7 +62,7 @@
         <TextView
             android:id="@+id/sum2"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="10dp" android:padding="10dp" android:text="18" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="..." />
 
         <!--third line-->
         <EditText
@@ -86,23 +86,23 @@
         <TextView
             android:id="@+id/sum3"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="..." />
 
         <!--fourth line-->
         <TextView
             android:id="@+id/sum4"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="..." />
 
         <TextView
             android:id="@+id/sum5"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="..." />
 
         <TextView
             android:id="@+id/sum6"
             android:layout_height="wrap_content" android:layout_width="wrap_content"
-            android:layout_margin="10dp" android:padding="10dp" android:text="10" />
+            android:layout_margin="10dp" android:padding="10dp" android:text="..." />
 
     </GridLayout>
 
@@ -112,8 +112,9 @@
         android:orientation="horizontal" >
 
         <Button
+            android:id="@+id/submit"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Submit" android:onClick="submit" />
+            android:text="Submit" android:onClick="submit" android:enabled="false"/>
 
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -132,8 +133,14 @@
 
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Quit" android:onClick="quit" />
+            android:text="Back to menu" android:onClick="quit" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/current_level"
+        android:layout_width="match_parent" android:layout_height="20dp"
+        android:layout_margin="10dp" android:textAlignment="center"
+        android:textSize="10dp" />
 
 </LinearLayout>
