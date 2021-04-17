@@ -2,56 +2,64 @@ package com.example.magictriangle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class ParametersActivity extends AppCompatActivity {
 
-    Integer level_number;
-    TextView text_current_level = (TextView) findViewById(R.id.current_level);
+    static final String r_current_level = "1";
+    static final String r_content = "1";
+    static final String r_username = "player";
+    Integer current_level;
+    String content;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parameters);
-        level_number = 1;
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        current_level = Integer.parseInt(prefs.getString(r_current_level, "1"));
+        content = prefs.getString(r_content, "1");
+        username = prefs.getString(r_username, "player");
+        TextView t_current_level = (TextView) findViewById(R.id.current_level);
+        t_current_level.setText("Current level: " + content);
+        TextView t_current_username = (TextView) findViewById(R.id.current_username);
+        t_current_username.setText("Current username: " + username);
     }
 
-    public void level1(View v){
-        level_number = 1;
-        text_current_level.setText("Current level: 1 - one empty cell");
+    public void back(View v){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor ed = prefs.edit();
+        ed.putString(String.valueOf(r_current_level), String.valueOf(current_level));
+        ed.putString(r_content, content);
+        ed.putString(r_username, username);
+        ed.commit();
+        this.finish();
     }
-    public void level2(View v){
-        level_number = 2;
-        text_current_level.setText("Current level: 2 - two empty cells");
+
+    public void confirm_level(View v){
+        EditText e_current_level = findViewById(R.id.edit_level);
+        TextView t_current_level = (TextView) findViewById(R.id.current_level);
+        content = e_current_level.getText().toString();
+        try {
+            current_level = Integer.parseInt(content);
+            t_current_level.setText("Current level: "+content);
+        } catch(NumberFormatException nfe) {
+            System.out.println("Could not parse " + nfe);
+        }
+
     }
-    public void level3(View v){
-        level_number = 3;
-        text_current_level.setText("Current level: 3 - three empty cells");
+
+    public void confirm_username(View v){
+        EditText e_current_username = findViewById(R.id.edit_username);
+        TextView t_current_username = (TextView) findViewById(R.id.current_username);
+        username = e_current_username.getText().toString();
+        t_current_username.setText("Current usernme: "+username);
     }
-    public void level4(View v){
-        level_number = 4;
-        text_current_level.setText("Current level: 4 - four empty cells");
-    }
-    public void level5(View v){
-        level_number = 5;
-        text_current_level.setText("Current level: 5 - five empty cells");
-    }
-    public void level6(View v){
-        level_number = 6;
-        text_current_level.setText("Current level: 6 - six empty cells");
-    }
-    public void level7(View v){
-        level_number = 7;
-        text_current_level.setText("Current level: 7 - seven empty cells");
-    }
-    public void level8(View v){
-        level_number = 8;
-        text_current_level.setText("Current level: 8 - eight empty cells");
-    }
-    public void level9(View v){
-        level_number = 9;
-        text_current_level.setText("Current level: 9 - nine empty cells");
-    }
+
 }

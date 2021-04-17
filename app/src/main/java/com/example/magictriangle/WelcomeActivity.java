@@ -28,10 +28,8 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public void about(View v){
         Context context = getApplicationContext();
-        CharSequence text = "Add the numbers in the columns and rows together, the numbers cannot repeat.\n" +
-                "The application was created in 2021 by Kinga Kalisz";
+        CharSequence text = "The application was created in 2021 by Kinga Kalisz";
         int duration = Toast.LENGTH_LONG;
-
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
